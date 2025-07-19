@@ -1,13 +1,9 @@
 title: Zane G
 description: Personal blog for sharing research and projects.
-theme: jekyll-theme-hacker
-
-# Optional social links (minima supports these)
+remote_theme: pages-themes/hacker@v0.2.0
+plugins:
+- jekyll-remote-theme
 author: Zane G
 github_username: zaneGittins
-
-# Enable posts
 show_excerpts: true
-
-# Optional but useful
 markdown: kramdown
