@@ -13,4 +13,8 @@ h1, h2, h3, h4, h5, h6 {
   color: #ff8800; /* Orange */
 }
 
+.header-github {
+  display: none !important;
+}
+
 /* You can target other elements similarly */
