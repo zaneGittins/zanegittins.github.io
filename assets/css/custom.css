@@ -1,20 +1,31 @@
-/* Change link colors */
+/* Basic link colors */
 a, a:visited {
-  color: #ff8800; /* Orange */
+  color: #ff8800 !important; /* bright orange */
 }
 
-/* Change visited link color */
+/* Visited links a bit darker */
 a:visited {
-  color: #ff6600; /* Darker orange */
+  color: #cc6600 !important;
 }
 
-/* Change headings or other green accents */
+/* Post titles */
 h1, h2, h3, h4, h5, h6 {
-  color: #ff8800; /* Orange */
+  color: #ff8800 !important;
 }
 
-.header-github {
-  display: none !important;
+/* Post metadata (author, date) */
+.post-meta, .post-meta a {
+  color: #ff8800 !important;
 }
 
-/* You can target other elements similarly */
+/* Tag labels */
+.tags a {
+  background-color: #ff8800 !important;
+  color: #1a1a1a !important; /* dark text on orange background */
+}
+
+/* Code blocks */
+code, pre {
+  background-color: #330000 !important; /* dark red background */
+  color: #ff8800 !important;
+}
