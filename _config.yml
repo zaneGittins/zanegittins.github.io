@@ -1,2 +1,13 @@
 title: Zane G
-theme: minima
+description: Personal blog for sharing research and projects.
+theme: jekyll-theme-cayman-dark
+
+# Optional social links (minima supports these)
+author: Zane G
+github_username: zaneGittins
+
+# Enable posts
+show_excerpts: true
+
+# Optional but useful
+markdown: kramdown
