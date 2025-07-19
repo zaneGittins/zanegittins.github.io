@@ -1,31 +1,39 @@
-/* Basic link colors */
 a, a:visited {
   color: hwb(199 33% 0%) !important; /* bright orange */
 }
 
-/* Visited links a bit darker */
 a:visited, li, ul {
   color: hwb(199 6% 20%) !important;
 }
 
-/* Post titles */
 h1, h2, h3, h4, h5, h6, title {
   color: hwb(199 33% 0%) !important;
 }
 
-/* Post metadata (author, date) */
 .post-meta, .post-meta a {
   color: hwb(199 33% 0%) !important;
 }
 
-/* Tag labels */
 .tags a {
   background-color: hwb(199 33% 0%) !important;
   color: #1a1a1a !important; /* dark text on orange background */
 }
 
-/* Code blocks */
 code, pre {
   background-color: #330000 !important; /* dark red background */
   color: hwb(199 33% 0%) !important;
+}
+
+.site-header {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.site-logo {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid hwb(199 33% 0%);
 }

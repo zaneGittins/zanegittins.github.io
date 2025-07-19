@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Zane's Blog
+title: Signal Sleuth
 ---
 
 This is the personal blog for Zane Gittins. 
