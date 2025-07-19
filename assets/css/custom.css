@@ -1,0 +1,16 @@
+/* Change link colors */
+a, a:visited {
+  color: #ff8800; /* Orange */
+}
+
+/* Change visited link color */
+a:visited {
+  color: #ff6600; /* Darker orange */
+}
+
+/* Change headings or other green accents */
+h1, h2, h3, h4, h5, h6 {
+  color: #ff8800; /* Orange */
+}
+
+/* You can target other elements similarly */

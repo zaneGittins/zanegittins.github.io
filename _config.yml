@@ -7,3 +7,12 @@ author: Zane G
 github_username: zaneGittins
 show_excerpts: true
 markdown: kramdown
+sass:
+  style: compressed
+defaults:
+  -
+    scope:
+      path: ""
+      type: "pages"
+    values:
+      css: "/assets/css/custom.css"
