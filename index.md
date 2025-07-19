@@ -3,7 +3,7 @@ layout: default
 title: Zane's Blog
 ---
 
-Welcome to my blog.
+This is the personal blog for Zane Gittins. 
 
 <ul>
   {% for post in site.posts %}
