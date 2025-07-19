@@ -4,12 +4,12 @@ a, a:visited {
 }
 
 /* Visited links a bit darker */
-a:visited {
+a:visited, li {
   color: #cc6600 !important;
 }
 
 /* Post titles */
-h1, h2, h3, h4, h5, h6 {
+h1, h2, h3, h4, h5, h6, title {
   color: #ff8800 !important;
 }
 
