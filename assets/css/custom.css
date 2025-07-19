@@ -31,9 +31,11 @@ code, pre {
 }
 
 .site-logo {
-  width: 40px;
-  height: 40px;
+  max-width: 40px !important;
+  max-height: 40px !important;
+  width: 40px !important;
+  height: 40px !important;
   border-radius: 50%;
   object-fit: cover;
-  border: 2px solid hwb(199 33% 0%);
+  margin-right: 15px;
 }
