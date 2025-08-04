@@ -8,10 +8,10 @@
   --bg-color: #f8f6f0;           /* Warm off-white background */
   --text-color: #2c2c2c;         /* Dark gray text */
   --text-secondary: #5a5a5a;     /* Lighter gray for secondary text */
-  --accent-color: #8b6f47;       /* Warm brown accent */
+  --accent-color: #5a5a5a;       /* Warm brown accent */
   --border-color: #e8e4dc;       /* Subtle border color */
   --link-color: #6b5b73;         /* Muted purple for links */
-  --link-hover: #8b6f47;         /* Brown on hover */
+  --link-hover: #5a5a5a;         /* Brown on hover */
 }
 
 /* Base styling */
