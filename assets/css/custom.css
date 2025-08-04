@@ -34,7 +34,7 @@ body {
 
 /* Header styling */
 .site-header {
-  background-color: var(--bg-color);
+  background-color: var(--bg-color) !important;
   border-bottom: 1px solid var(--border-color);
   padding: 20px 0;
 }
@@ -49,6 +49,37 @@ body {
 .site-title:hover {
   color: var(--link-hover);
   text-decoration: none;
+}
+
+/* Remove any unwanted elements in header */
+.site-header input[type="checkbox"],
+.site-header .menu-icon,
+.site-header .trigger input,
+.site-header label {
+  display: none !important;
+}
+
+/* Clean up header lists and remove bullets/checkboxes */
+.site-header ul {
+  list-style: none !important;
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+.site-header li {
+  list-style: none !important;
+  margin: 0 !important;
+}
+
+.site-header li::before,
+.site-header li::after {
+  content: none !important;
+}
+
+/* Hide mobile menu toggle elements */
+.site-header .menu-icon svg,
+.site-header #nav-trigger {
+  display: none !important;
 }
 
 /* Navigation */
