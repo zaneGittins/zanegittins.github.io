@@ -8,10 +8,10 @@
   --bg-color: #f8f6f0;           /* Warm off-white background */
   --text-color: #2c2c2c;         /* Dark gray text */
   --text-secondary: #5a5a5a;     /* Lighter gray for secondary text */
-  --accent-color: #5a5a5a;       /* Warm brown accent */
+  --accent-color: #5a5a5a;       /* Lighter grayaccent */
   --border-color: #e8e4dc;       /* Subtle border color */
   --link-color: #6b5b73;         /* Muted purple for links */
-  --link-hover: #5a5a5a;         /* Brown on hover */
+  --link-hover: #5a5a5a;         /* Lighter gray on hover */
 }
 
 /* Base styling */
@@ -217,51 +217,50 @@ th {
   color: var(--accent-color);
 }
 
-/* Footer */
+/* Hide default Minima footer completely */
 .site-footer {
-  background-color: var(--bg-color) !important;
-  border-top: 1px solid var(--border-color);
-  padding: 30px 0;
-  color: var(--text-secondary);
-  font-size: 14px;
-  text-align: center;
+  display: none !important;
 }
 
-/* Fix footer content spacing and remove unwanted elements */
-.site-footer .wrapper {
+/* Style your custom footer */
+.custom-footer {
+  background-color: var(--bg-color);
+  border-top: 1px solid var(--border-color);
+  padding: 15px 0;
+  color: var(--text-secondary);
+  font-size: 12px;
+  text-align: center;
+  margin-top: auto;
+}
+
+.custom-footer .wrapper {
   max-width: 800px;
   margin: 0 auto;
-  padding: 20px;
+  padding: 0 20px;
 }
 
-.site-footer p {
+.custom-footer p {
   margin: 0;
   line-height: 1.4;
 }
 
-/* Remove any stray bullets or list markers */
-.site-footer ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-.site-footer li {
-  display: inline;
-  margin: 0;
-}
-
-.site-footer li::before {
-  content: none !important;
-}
-
-/* Clean up any default footer links */
-.footer-col-wrapper {
+.custom-footer a {
   color: var(--text-secondary);
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
 }
 
-.footer-col {
-  margin-bottom: 0;
+.custom-footer a:hover {
+  color: var(--accent-color);
+  text-decoration: none;
+}
+
+.custom-footer svg {
+  width: 16px;
+  height: 16px;
+  fill: currentColor;
 }
 
 /* Post list styling */
