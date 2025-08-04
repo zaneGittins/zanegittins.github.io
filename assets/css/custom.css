@@ -188,11 +188,49 @@ th {
 
 /* Footer */
 .site-footer {
-  background-color: var(--bg-color);
+  background-color: var(--bg-color) !important;
   border-top: 1px solid var(--border-color);
   padding: 30px 0;
   color: var(--text-secondary);
   font-size: 14px;
+  text-align: center;
+}
+
+/* Fix footer content spacing and remove unwanted elements */
+.site-footer .wrapper {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.site-footer p {
+  margin: 0;
+  line-height: 1.4;
+}
+
+/* Remove any stray bullets or list markers */
+.site-footer ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.site-footer li {
+  display: inline;
+  margin: 0;
+}
+
+.site-footer li::before {
+  content: none !important;
+}
+
+/* Clean up any default footer links */
+.footer-col-wrapper {
+  color: var(--text-secondary);
+}
+
+.footer-col {
+  margin-bottom: 0;
 }
 
 /* Post list styling */
@@ -244,27 +282,13 @@ th {
   }
 }
 
-/* Dark mode compatibility (optional) */
-@media (prefers-color-scheme: dark) {
-  :root {
-    --bg-color: #1a1a1a;
-    --text-color: #e0e0e0;
-    --text-secondary: #b0b0b0;
-    --accent-color: #d4b896;
-    --border-color: #333;
-    --link-color: #b19cd9;
-    --link-hover: #d4b896;
-  }
-  
-  pre, code {
-    background-color: #2a2a2a;
-  }
-  
-  blockquote {
-    background-color: #2a2a2a;
-  }
-  
-  th {
-    background-color: #2a2a2a;
-  }
+/* Force light theme - remove dark mode auto-switching */
+html {
+  background-color: var(--bg-color) !important;
+}
+
+/* Override any theme defaults */
+body, .site-header, .page-content, .site-footer {
+  background-color: var(--bg-color) !important;
+  color: var(--text-color) !important;
 }
