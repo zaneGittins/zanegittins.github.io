@@ -322,3 +322,24 @@ body, .site-header, .page-content, .site-footer {
   background-color: var(--bg-color) !important;
   color: var(--text-color) !important;
 }
+
+/* Centered image styling */
+.centered-image {
+  text-align: center !important;
+  margin: 20px 0 !important;
+}
+
+.centered-image img {
+  max-width: 100% !important;
+  height: auto !important;
+  display: block !important;
+  margin: 0 auto !important;
+}
+
+.centered-image p {
+  font-style: italic !important;
+  margin-top: 8px !important;
+  margin-bottom: 0 !important;
+  color: var(--text-secondary) !important;
+  font-size: 14px !important;
+}
