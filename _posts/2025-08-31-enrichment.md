@@ -45,7 +45,7 @@ Viewing sample events in our SIEM we can view all the new fields which were adde
   <p>Enriched Sysmon events</p>
 </div>
 
-The enriched events we recieve are now far superior to the default Sysmon logs. They supply analysts with the context they need to close alerts, and open up new possibilities for detections. We can easily apply similar enrichments to other events, such as adding commandline information to Sysmon network connection events.
+The enriched events we recieve are far superior to the default Sysmon logs. They supply analysts with the context they need to close alerts, and open up new possibilities for detections. We can easily apply similar enrichments to other events, such as adding commandline information to Sysmon network connection events.
 
 ## Conclusion
 
