@@ -40,7 +40,10 @@ sep="->") AS CallChain
 
 Viewing sample events in our SIEM we can view all the new fields which were added to our process creations.
 
-![Enriched Sysmon Events](/assets/images/enriched_events.png)
+<div style="text-align: center;">
+  <img src="/assets/images/enriched_events.png" alt="Enriched Sysmon Events">
+  <p style="font-style: italic; margin-top: 8px;">Enriched Sysmon events</p>
+</div>
 
 The enriched events we recieve are now far superior to the default Sysmon logs. They supply analysts with the context they need to close alerts, and open up new possibilities for detections. We can easily apply similar enrichments to other events, such as adding commandline information to Sysmon network connection events.
 

@@ -3,7 +3,7 @@ layout: default
 ---
 This is the personal blog of Zane Gittins, focusing on cybersecurity, blue team operations, and digital forensics. I'm using this blog to document things I've learned for my own reference and with the hope that it will help others.
 
-[About Me](/about/) | [All Posts](#posts)
+[About Me](/about/)
 
 ## Posts {#posts}
 
