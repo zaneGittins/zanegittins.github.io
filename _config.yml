@@ -1,0 +1,17 @@
+title: Signal Sleuth
+description: This is the personal blog for Zane Gittins. 
+theme: minima
+author: Zane G
+github_username: zaneGittins
+show_excerpts: true
+markdown: kramdown
+favicon: /assets/images/logo.png
+sass:
+  style: compressed
+defaults:
+  -
+    scope:
+      path: ""
+      type: "pages"
+    values:
+      css: "/assets/css/custom.css"
