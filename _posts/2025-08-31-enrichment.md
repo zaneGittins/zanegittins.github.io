@@ -8,7 +8,7 @@ The difference between a good detection and a great one often comes down to havi
 
 Sysmon is a powerful observability tool commonly used by defenders to monitor critical telemetry not present in Windows by default. Sysmon allows for tracking key events such as process creation, network connections, DNS requests, file creations, and more. However, Sysmon development has stagnated in recent years, the last meaningful Windows contribution that added a new feature was in June 2023. Using Velociraptor as our log collector, we can breathe new life into Sysmon and tailor telemetry to individual use cases.
 
-For example, we can add [TLSH hashes](https://blog.ecapuano.com/p/the-role-of-fuzzy-hashes-in-security) and authenticode signatures onto process creations, and commandlines onto network connection events. Using Velociraptor we can easily extend any event to add new and interesting fields.
+For example, we can add [TLSH hashes](https://blog.ecapuano.com/p/the-role-of-fuzzy-hashes-in-security) and authenticode signatures onto process creations, and commandlines onto network connection events. Using Velociraptor's powerful query language we can easily extend any event to add new and interesting fields.
 
 ## Example
 
@@ -45,7 +45,26 @@ Viewing sample events in our SIEM we can view all the new fields which were adde
   <p>Enriched Sysmon events</p>
 </div>
 
-The enriched events we recieve are far superior to the default Sysmon logs. They supply analysts with the context they need to close alerts, and open up new possibilities for detections. We can easily apply similar enrichments to other events, such as adding commandline information to Sysmon network connection events.
+The enriched events we receive are far superior to the default Sysmon logs. They supply analysts with the context they need to close alerts, and open up new possibilities for detections. We can easily apply similar enrichments to other events, such as adding commandline information to Sysmon network connection events.
+
+## Performance
+
+For those managing large fleets of endpoints you may worry about the performance impact of adding these additional fields. After all, we are collecting authenticode signatures and TLSH hashes in realtime on each process execution. In my testing, the performance impact has been negligible due to intelligent caching mechanisms. We cache both the authenticode signature and TLSH hash using the standard Sysmon hash field as a lookup key. This approach ensures that expensive operations are performed only once per unique executable. When the same binary launches multiple times, subsequent events leverage cached results rather than consuming CPU cycles.
+
+## Getting Started
+
+For those new to Velociraptor I wanted to share these brief steps to start collecting the enriched process creation events mentioned above.
+
+1. First, import the [Process Creation enriched](https://docs.velociraptor.app/exchange/artifacts/pages/windows.eventlogs.sysmonprocessenriched/) sample artifact by either running `Server.Import.ArtifactExchange` or manually copying the artifact to your server.
+
+2. Add the artifact to the client monitoring table, additionally ensure you have the process tracker enabled.
+
+<div class="centered-image">
+  <img src="/assets/images/monitoring.png" alt="Monitoring table">
+  <p>Monitoring table</p>
+</div>
+
+That's it! Enriched sysmon events should now begin streaming into your server. You can forward these to a SIEM by using a server monitoring artifact such as [Elastic.Events.Upload](https://docs.velociraptor.app/artifact_references/pages/elastic.events.upload/). 
 
 ## Conclusion
 
