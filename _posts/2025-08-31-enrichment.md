@@ -8,11 +8,13 @@ The difference between a good detection and a great one often comes down to havi
 
 Sysmon is a powerful observability tool commonly used by defenders to monitor critical telemetry not present in Windows by default. Sysmon allows for tracking key events such as process creation, network connections, DNS requests, file creations, and more. However, Sysmon development has stagnated in recent years, the last new feature was added in June 2023. Using Velociraptor as our log collector, we can breathe new life into Sysmon and tailor telemetry to individual use cases.
 
-For example, we can add [TLSH hashes](https://blog.ecapuano.com/p/the-role-of-fuzzy-hashes-in-security) and authenticode signatures onto process creations, and commandlines onto network connection events. Using Velociraptor's powerful query language we can easily extend any event to add new and interesting fields.
+For example, we can add [TLSH hashes](https://blog.ecapuano.com/p/the-role-of-fuzzy-hashes-in-security) and authenticode signatures onto process creations, and commandlines onto network connection events. Using Velociraptor's powerful query language we can easily extend any event to add new and interesting fields. 
+
+Even for those who have EDR in place, Velociraptor remains a compelling piece of the observability pipeline. EDRs often transparently sample events, and users have little to no control over the log schema. Using Velociraptor we can gather and enrich event logs, and even tap into lower level telemetry sources such as [ETW](https://docs.velociraptor.app/docs/gui/debugging/vql/plugins/etw/).
 
 ## Example
 
-I've previously released an example of enriching Sysmon process creations to the [artifact exchange](https://docs.velociraptor.app/exchange/artifacts/pages/windows.eventlogs.sysmonprocessenriched/). 
+I've previously released an example of enriching Sysmon process creations to the [artifact exchange](https://docs.velociraptor.app/exchange/artifacts/pages/windows.eventlogs.sysmonprocessenriched/).
 
 
 First, I added the authenticode signature to process creations, telling us if this is a signed and trusted binary, along with signature information. Checking the authenticode signature of a process is often one of the first steps defenders take, and now that information is readily available instead of requiring follow-up action.
@@ -45,7 +47,7 @@ Viewing sample events in our SIEM we can view all the new fields which were adde
   <p>Enriched Sysmon events</p>
 </div>
 
-The enriched events we receive are far superior to the default Sysmon logs. They supply analysts with the context they need to close alerts, and open up new possibilities for detections. We can easily apply similar enrichments to other events, such as adding commandline information to Sysmon network connection events.
+The enriched events we receive are far superior to the default Sysmon logs. They supply analysts with the context they need to close alerts, and open up new possibilities for detections. We can easily apply similar enrichments to other events, such as adding commandline information to Sysmon network connection events. None of the VQL used here is overly complex, my hope is that readers use this as a template to create their own artifacts to enrich other Sysmon events and Windows log sources.
 
 ## Performance
 
