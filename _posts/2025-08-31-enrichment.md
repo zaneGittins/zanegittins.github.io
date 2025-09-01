@@ -6,7 +6,7 @@ date: 2025-08-31
 
 The difference between a good detection and a great one often comes down to having the right context at the right time. With [Velociraptor](https://docs.velociraptor.app/) we can enrich logs with additional data before they are sent to the SIEM. These enriched logs allow analysts to better triage detections, and for detection engineers to write new and improved rules.
 
-Sysmon is a powerful observability tool commonly used by defenders to monitor critical telemetry not present in Windows by default. Sysmon allows for tracking key events such as process creation, network connections, DNS requests, file creations, and more. However, Sysmon development has stagnated in recent years, the last meaningful Windows contribution that added a new feature was in June 2023. Using Velociraptor as our log collector, we can breathe new life into Sysmon and tailor telemetry to individual use cases.
+Sysmon is a powerful observability tool commonly used by defenders to monitor critical telemetry not present in Windows by default. Sysmon allows for tracking key events such as process creation, network connections, DNS requests, file creations, and more. However, Sysmon development has stagnated in recent years, the last new feature was added in June 2023. Using Velociraptor as our log collector, we can breathe new life into Sysmon and tailor telemetry to individual use cases.
 
 For example, we can add [TLSH hashes](https://blog.ecapuano.com/p/the-role-of-fuzzy-hashes-in-security) and authenticode signatures onto process creations, and commandlines onto network connection events. Using Velociraptor's powerful query language we can easily extend any event to add new and interesting fields.
 
