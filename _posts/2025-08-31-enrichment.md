@@ -59,7 +59,7 @@ For those new to Velociraptor I wanted to share these brief steps to start colle
 
 1. First, import the [Process Creation enriched](https://docs.velociraptor.app/exchange/artifacts/pages/windows.eventlogs.sysmonprocessenriched/) sample artifact by either running `Server.Import.ArtifactExchange` or manually copying the artifact to your server.
 
-2. Add the artifact to the client monitoring table, additionally ensure you have the process tracker enabled.
+2. Add the artifact to the client monitoring table, ensuring you have the process tracker enabled.
 
 <div class="centered-image">
   <img src="/assets/images/monitoring.png" alt="Monitoring table">
@@ -70,4 +70,4 @@ That's it! Enriched sysmon events should now begin streaming into your server. Y
 
 ## Conclusion
 
-While Sysmon's development may have slowed, its core value remains strong. By leveraging Velociraptor's powerful query language, we can enhance Sysmon telemetry with new data. The enrichment strategies discussed here, from TLSH hashes to process call chains, represent just the beginning of what's possible. As threats evolve, so must the telemetry we monitor. Velociraptor gives us the tools to do exactly that, regardless of Sysmon's development timeline. 
+While Sysmon's development may have slowed, its core value remains strong. By leveraging Velociraptor's powerful query language, we can enhance Sysmon telemetry with new data. The enrichment strategies discussed here, from TLSH hashes to process call chains, represent just the beginning of what's possible. As threats evolve, so must the telemetry we monitor. Velociraptor gives us the tools to do exactly that, regardless of Sysmon's development timeline.
