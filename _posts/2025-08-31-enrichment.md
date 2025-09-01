@@ -4,6 +4,10 @@ title: "Enriching Sysmon with Velociraptor"
 date: 2025-08-31
 ---
 
+<div class="centered-image">
+  <img src="/assets/images/blog_image1.png" alt="">
+</div>
+
 The cornerstone of effective security monitoring is having the right context at the right time. Using [Velociraptor](https://docs.velociraptor.app/) we can enrich logs before they are sent to the SIEM. The additional context is available to analysts immediately, and enables detection engineers to write new and improved rules.
 
 Sysmon is a powerful observability tool commonly used by defenders to monitor critical telemetry not present in Windows by default. Sysmon tracks key events needed to trace threat actor activity such as process creation, network connections, DNS requests, file creations, and more. However, Sysmon development has stagnated in recent years, the last new feature was added in June of 2023. Using Velociraptor as our log collector, we can breathe new life into Sysmon by adding valuable context to an already powerful log source.
