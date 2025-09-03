@@ -36,9 +36,9 @@ LET get_auth_cache(Image) = SELECT authenticode(filename=Image) AS Authenticode
     FROM scope()
 ```
 
-### TLSH Fuzzy Hashes
+### TLSHuzzy Hashes
 
-Second, I add [TLSH](https://tlsh.org/) fuzzy hashes to enable similarity-based threat detection. TLSH allows us to identify malware variants by comparing hash distances, even when attackers modify the original code. This creates opportunities for proactive threat hunting against entire malware families rather than specific samples.
+Second, I add [TLSH](https://tlsh.org/) hashes to enable similarity-based threat detection. TLSH allows us to identify malware variants by comparing hash distances, even when attackers modify the original code. This creates opportunities for proactive threat hunting against entire malware families rather than specific samples.
 
 ```sql
 LET get_tlsh_cache(Image) = SELECT tlsh_hash(path=Image) AS TLSH
