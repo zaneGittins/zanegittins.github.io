@@ -21,7 +21,7 @@ Even for those who have EDR in place, Velociraptor remains a compelling piece of
 Process creation events form the backbone of most security investigations. While Sysmon's process creation logs are excellent and far superior to Windows' built-in 4688 events, they can be enhanced further. My approach to enrichment focuses on two key questions: What follow-up actions do analysts typically take when reviewing these events? And what additional fields would unlock new detection opportunities? Based on this analysis, I created an [artifact](https://docs.velociraptor.app/exchange/artifacts/pages/windows.eventlogs.sysmonprocessenriched/) that adds three strategic fields to Sysmon process creation events.
 
 <div class="centered-image">
-  <img src="/assets/images/enriched_events.png" alt="Enriched Sysmon Events">
+  <img src="/assets/images/sysmon_enrichment/enriched_events.png" alt="Enriched Sysmon Events">
   <p>Enriched Sysmon events showing authenticode signatures, TLSH hashes, and process call chains</p>
 </div>
 

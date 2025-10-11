@@ -11,3 +11,4 @@ I'm Zane Gittins, a cybersecurity professional focused on blue team operations a
 
 - GitHub: [@zaneGittins](https://github.com/zaneGittins)
 - LinkedIn: [Zane Gittins](https://www.linkedin.com/in/zane-g-40291a152)
+- HackerOne: [ZaneG](https://hackerone.com/zaneg/)
