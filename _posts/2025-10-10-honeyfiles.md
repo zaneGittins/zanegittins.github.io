@@ -33,7 +33,7 @@ Microsoft-Windows-Kernel-File reports the thread within the process which access
 
 Velociraptor checks if the thread start address is from a memory region marked MEM_IMAGE, and if it is, it returns the path of the image on disk. Most legitimate processes reading our honeyfiles should have a thread start address in a MEM_IMAGE memory region. If not, we'll receive an empty filename from Velociraptor which is a strong indicator of process injection. 
 
-In the below example we test by running the popular C2 framework Sliver which is running inside an injected explorer.exe process. We then read the credentials.db file:
+In the below example we test by running the popular C2 framework Sliver which is running inside an injected explorer.exe process. We then read the azureProfile.json file:
 
 <div class="centered-image">
   <img src="/assets/images/honeyfiles/sliver_injected_read.png" alt="Sliver read honeyfile">
